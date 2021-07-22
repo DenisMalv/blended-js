@@ -35,7 +35,7 @@ let price = 0
 let startPrice = 100
 let attempts = 3;
 const minRange = 0;
-let maxRange = 3;
+let maxRange = 5;
 let randomNumber;
 let userNumber;
 let totalPrice = 0
@@ -45,7 +45,7 @@ let startGame = confirm('Хотите сыграть в игру?');
 
 if (startGame === true) {
     op: while (startGame === true) {
-        maxRange = 3;
+        maxRange = 5;
         startPrice = 100
         // price = startprice
         totalPrice = 0
