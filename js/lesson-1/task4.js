@@ -62,7 +62,7 @@ if (startGame === true) {
             
             userNumber = prompt(`Выберите число в диапазоне: ${minRange} to ${maxRange}\nОсталось попыток: ${attempts}\nВыиграш за текущую попытку: ${price}`)
             if (userNumber === null) {
-                alert(`Спасибо за участие. Ваш приз: ${totalPrice} `)
+                alert(`Спасибо за участие.\nВаш приз: ${totalPrice} `)
                 break op
             } else if (userNumber.trim().length <= 0 || isNaN(userNumber)) {
                 alert(`Введите целое число`)
@@ -73,7 +73,7 @@ if (startGame === true) {
                 totalPrice += price
                 // alert(`Поздравляем, вы выиграли! Ваш приз:… ${price}, вся сумма${Number(totalPrice)} `)
                 console.log(`${attempts}, ${userNumber}, ${randomNumber}, ${price}, ${totalPrice}`)
-                let continueGame = confirm(`Поздравляем, вы выиграли! Ваш приз: ${price}, вся сумма${Number(totalPrice)}\nИскомое число: ${randomNumber}\nЖелаете продолжить?`);
+                let continueGame = confirm(`Поздравляем, вы выиграли!\nВаш приз: ${price}\nВся сумма: ${Number(totalPrice)}\nИскомое число: ${randomNumber}\nЖелаете продолжить?`);
                 if (continueGame === true) {
                     up: while (startGame === true) {
                         maxRange += 5
@@ -92,7 +92,7 @@ if (startGame === true) {
                                         
                             userNumber = prompt(`Выберите число в диапазоне: ${minRange} to ${maxRange}\nОсталось попыток: ${attempts}\nВыиграш за текущую попытку: ${price}`)
                             if (userNumber === null) {
-                                alert(`Спасибо за участие. Ваш приз:… ${totalPrice} `)
+                                alert(`Спасибо за участие.\nВаш приз: ${totalPrice} `)
                                 break op
                             } else if (userNumber.trim().length <= 0 || isNaN(userNumber)) {
                                 alert(`Введите целое число`)
@@ -103,24 +103,24 @@ if (startGame === true) {
                             if (Number(userNumber) === Number(randomNumber)) {       
                                 totalPrice += price
                                 // alert(`Поздравляем, вы выиграли! Ваш приз:…(вложенный) ${price}, вся сумма${Number(totalPrice)} `)
-                                let continueGame = confirm(`Поздравляем, вы выиграли! Ваш приз: ${price}, вся сумма${Number(totalPrice)}\nИскомое число: ${randomNumber}\nЖелаете продолжить?`);
+                                let continueGame = confirm(`Поздравляем, вы выиграли!\nВаш приз: ${price}\nВся сумма: ${Number(totalPrice)}\nИскомое число: ${randomNumber}\nЖелаете продолжить?`);
                                 if (continueGame === true) {
                                     continue up
                                 } else {
-                                    alert(`Спасибо за участие. Ваш приз:(вложенный) ${totalPrice}\nИскомое число: ${randomNumber} `)
+                                    alert(`Спасибо за участие.\nВаш приз:(вложенный) ${totalPrice}\nИскомое число: ${randomNumber} `)
                                     break op
                                 }
                                             
                             } else {
                                 price = 0
-                                alert(`Спасибо за участие. Ваш приз:(вложенный) ${price}, вся сумма${Number(totalPrice)}`)
+                                alert(`Спасибо за участие.\nВаш приз:(вложенный) ${price}\nВся сумма${Number(totalPrice)}`)
                                 if (attempts === 1) {
                                     let resetGame = confirm(`Искомое число: ${randomNumber}\nначать сначала(вложенный)?`);
                                 
                                     if (resetGame === true) {
                                         continue ip                                       
                                     } else {
-                                        alert(`Спасибо за участие. Ваш приз:…(вложенный) ${totalPrice}\nИскомое число: ${randomNumber} `)
+                                        alert(`Спасибо за участие.\nВаш приз:(вложенный) ${totalPrice}\nИскомое число: ${randomNumber} `)
                                         break op
                                     }
                                 }
@@ -128,14 +128,14 @@ if (startGame === true) {
                         }
                     }
                 } else {
-                    alert(`Спасибо за участие. Ваш приз: ${totalPrice} `)
+                    alert(`Спасибо за участие.\nВаш приз: ${totalPrice} `)
                     break op
                 }
                 
             } else {
                 console.log(`${attempts}, ${userNumber}, ${randomNumber}, ${price}, ${totalPrice}`)
                 price = 0
-                alert(`Спасибо за участие. Ваш приз: ${price}, вся сумма${Number(totalPrice)}`)
+                alert(`Спасибо за участие.\nВаш приз: ${price}\nВся сумма: ${Number(totalPrice)}`)
                 if (attempts === 1) {
 
                     let resetGame = confirm(`Искомое число: ${randomNumber}\nНачать сначала?`);
