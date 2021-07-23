@@ -73,7 +73,7 @@ if (startGame === true) {                   // старт игры
             if (Number(userNumber) === Number(randomNumber)) {  // сравнение юзерчисла и рандом числа.
                 totalPrice += price                             // если угадал  прибавить сумму к выиграшу.
                 
-                console.log(`${attempts}, ${userNumber}, ${randomNumber}, ${price}, ${totalPrice}`)
+                console.log(`attempts:${attempts}, userNumber:${userNumber}, randomNumber:${randomNumber}, price:${price}, totalPrice:${totalPrice}`)
                 let continueGame = confirm(`  Поздравляем, вы выиграли!\n  Ваш приз: ${price}\n  Вся сумма: ${Number(totalPrice)}\n  Искомое число: ${randomNumber}\n  Желаете продолжить?`);    //вывод результата, при выиграше, и предложение играть дальше
                 if (continueGame === true) {        // если согласился, то запускается следующий повторяющийся цыкл(с увеличением значений)
                     up: while (startGame === true) { //замкнутый цыкл с увеличивающимися значениями.
@@ -100,7 +100,7 @@ if (startGame === true) {                   // старт игры
                                 attempts = attempts + 1  // если пользователь ввел не число то увеличиваем итерацию на 1 и повторяем цикл.
                                 continue yp
                             }
-                            console.log(`${attempts}, ${userNumber}, ${randomNumber}, ${price}`) //комментарии для разработчика.
+                            console.log(`attempts:${attempts}, userNumber:${userNumber}, randomNumber:${randomNumber}, price:${price}, totalPrice:${totalPrice}`) //комментарии для разработчика.
 
                             if (Number(userNumber) === Number(randomNumber)) {   //сравнение числа игрока и рандом числа.     
                                 totalPrice += price
